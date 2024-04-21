@@ -1,0 +1,69 @@
+/*html*/
+html{
+	height: 100%;
+}
+/*body*/
+body{
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	background: url(marcela-laskoski-YrtFlrLo2DQ-unsplash.jpg) no-repeat center fixed;
+  	background-size: cover;
+  	font-family: 'Brush Script MT',Cursive;
+  }
+
+main{
+	overflow-y: auto;
+	flex: 1;
+	padding-top: 100px;
+	padding-bottom: 150px;
+}
+/* header*/
+.Artist_intro{
+	padding: 50px;
+}
+
+.Artist_intro_content{
+	color: white;
+}
+
+#AH_intro {
+    font-size: 40px;
+    color: white;
+}
+
+#AP_intro{
+	font-size: 20px;
+	color: white;
+}
+
+/* about division*/
+.about_artist_content{
+	color: white;
+}
+
+#about_h{
+	font-size: 30px;
+} 
+#about_p{
+	font-size: 20px;
+}
+
+.about_pic img{
+    border-radius: 10px;
+    width: 200px;
+    height: 200px;
+}
+
+
+.row {
+    display: flex;
+}.col-1-3 {
+    flex: 33.33%;
+    float: left;
+    width: 33.33%;
+}.col-2-3 {
+    flex: 66.66%;
+    float: right;
+    width: 66.66%;
+}

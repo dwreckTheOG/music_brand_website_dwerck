@@ -1,29 +1,24 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+{% extends 'base.html' %}
 
-	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='index.css') }}">
-
-	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='header.css') }}">
-
-	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='footer.css') }}">
-	<title>HOME</title>
-</head>
-<body>
-<header>
-	<div class = 'header_div'>
-	<h1>The Artist</h1>
-	</div>
-	<div class = 'header_links'>
-		<a href="#">Home</a>
-		<a href="#">Music</a>
-		<a href="#">Videos</a>
-		<a href="#">Merch</a>
-		<a href="#">Tour</a>
-	</div>
-</header>
-
-</body>
-</html>
+{% block title %}Artist Intro{% endblock %}
+{% block link %}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='index.css') }}">
+{% endblock %}
+{% block content %}
+<div class="Artist_intro">
+    <div class="Artist_intro_content">
+        <h1 id="AH_intro">Discover Artist</h1>
+        <p id="AP_intro">Introduce the artist/brand of the artist.</p>
+    </div>
+</div>
+<div class="about_artist">
+    <div class="about_artist_content col-2-3">
+        <h1 id="about_h">About Artist</h1>
+        <p id="about_p">The Artist, a passionate musician hailing from [Locale], is on a mission to use the power of music to inspire positive change in his community and beyond. Through his soulful melodies and impactful lyrics, he aims to address social issues, spread awareness, and foster unity.</p>
+        <p id="about_p col-1-3">Join The Artist on his journey as he strives to make a difference through his music, advocating for equality, justice, and love.</p>
+    </div>
+    <div class="about_pic">
+        <img src="{{url_for('static' ,filename='arttist.jpg')}}">
+    </div>
+</div>
+{% endblock %}

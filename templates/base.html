@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}{% endblock %}</title>
+
+    <!-- Add links to CSS files -->
+    {% block link %}{% endblock %}
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='header.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='footer.css') }}">
+</head>
+<body>
+
+<!-- Header section -->
+<header>
+    <div class="header_div">
+        <h1>The Artist</h1>
+    </div>
+    <nav class="header_links">
+        <a href="#">Home</a> | 
+        <a href="#">Music</a> | 
+        <a href="#">Videos</a> | 
+        <a href="#">Merch</a> | 
+        <a href="#">Tour</a>
+    </nav>
+</header>
+
+<!-- Content section (to be overridden by extended templates) -->
+<main>
+    {% block content %}
+    {% endblock %}
+</main>
+
+<!-- Footer section -->
+<footer>
+    <address>
+        <p>Designer: DwreckSoft.</p>
+        <p>Email: <a href="mailto:dwrecksoft@gmail.com">dwrecksoft@gmail.com</a></p>
+        <p>Tel: <a href="tel:+254756893265">+254 756 893 265</a></p>
+    </address>
+    <p>&copy; 2024 All rights reserved.</p>
+</footer>
+
+</body>
+</html>
